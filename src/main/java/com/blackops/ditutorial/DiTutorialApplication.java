@@ -1,9 +1,6 @@
 package com.blackops.ditutorial;
 
-import com.blackops.ditutorial.controllers.ConstructorInjectedController;
-import com.blackops.ditutorial.controllers.MyController;
-import com.blackops.ditutorial.controllers.PropertyInjectedController;
-import com.blackops.ditutorial.controllers.SetterInjectedController;
+import com.blackops.ditutorial.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -15,6 +12,11 @@ public class DiTutorialApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext applicationContext = SpringApplication.run(DiTutorialApplication.class, args);
+
+		//MyController
+		I18nController i18nController = (I18nController) applicationContext.getBean("i18nController");
+		System.out.println(i18nController.getGreeting());
+
 		//MyController
 		MyController myController = (MyController) applicationContext.getBean("myController");
 		System.out.println(myController.getGreeting());

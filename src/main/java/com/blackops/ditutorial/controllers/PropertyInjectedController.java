@@ -12,7 +12,6 @@ public class PropertyInjectedController {
     GreetingService greetingService;
 
     public String getGreeting(){
-        return "In PropertyInjectedController:"
-                + greetingService.sayHello();
+        return greetingService.sayHello();
     }
 }
