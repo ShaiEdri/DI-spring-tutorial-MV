@@ -17,7 +17,7 @@ public class DiTutorialApplication {
 		ApplicationContext applicationContext = SpringApplication.run(DiTutorialApplication.class, args);
 		//MyController
 		MyController myController = (MyController) applicationContext.getBean("myController");
-		System.out.println(myController.seayHello());
+		System.out.println(myController.getGreeting());
 
 		//Property injected controller
 		PropertyInjectedController propertyInjectedController = (PropertyInjectedController) applicationContext.getBean("propertyInjectedController");
