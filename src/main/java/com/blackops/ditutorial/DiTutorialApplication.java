@@ -4,9 +4,11 @@ import com.blackops.ditutorial.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 import java.util.Arrays;
 
+@ComponentScan(basePackages = {"com.blackops.ditutorial", "i18n"})
 @SpringBootApplication
 public class DiTutorialApplication {
 
