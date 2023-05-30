@@ -1,7 +1,9 @@
 package com.blackops.ditutorial.controllers;
 
 import com.blackops.ditutorial.services.GreetingService;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class ConstructorInjectedController {
     private final GreetingService greetingService;
 
@@ -10,6 +12,7 @@ public class ConstructorInjectedController {
     }
 
     public String getGreeting(){
+        System.out.println(greetingService);
         return "In ConstructorInjectedController:"
                 + greetingService.sayHello();
     }
